@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+spring:
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+  sql:
+    init:
+      mode: always
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/Periods
+    username: root
+    password: 123
+  jpa:
+    openInView: true
+    show-sql: false
+    generateDdl: true
+    database: postgresql
+    databasePlatform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
